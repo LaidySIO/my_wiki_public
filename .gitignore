@@ -1,0 +1,8 @@
+.vs/*
+.vscode/*
+/.idea/workspace.xml
+/.idea/website_content.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+js/config.js

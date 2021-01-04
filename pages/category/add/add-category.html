@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Wiki - Add Category</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="../category.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <script src="../../../js/vendor/jquery-3.1.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+
+</head>
+
+<body class="page-add-category">
+    <div class="container h-100" id="addCategRootDiv">
+
+        <div class="my-5">
+            <a href="../../home/home.html" class="float-left position-absolute">
+                <button type="button" class="btn btn-success bmd-btn-fab">
+                    <i class="fas fa-arrow-left">
+                    </i>
+                </button>
+            </a>
+            <h1 class="text-center md-6 my-3"> My Wiki </h1>
+        </div>
+        <div class="">
+            <div class="card col-md-4 m-auto">
+                <div class="card-body">
+                    <h5 class="card-title">Add Category</h5>
+                    <form id="addCategoryForm">
+                        <div class="form-group">
+                            <label for="addCategoryName" class="bmd-label-floating">Name</label>
+                            <input type="text" class="form-control" id="addCategoryName" name="addCategoryName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="addCategoryDesc" class="bmd-label-floating">Description</label>
+                            <textarea class="form-control" id="addCategoryDesc" name="addCategoryDesc" minlength="10" rows="5" required></textarea>
+                        </div>
+                        <div class="form-check pl-0">
+                            <label class="form-check-label" for="addCategoryPrivate">
+                                Visibility
+                            </label>
+                            <span class="btn-group-sm">
+                                <i class="fas fa-info-circle"></i>
+                              </span>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="addCategoryPrivate"
+                                value="private" checked>
+                            <label class="form-check-label" for="addCategoryPrivate">
+                                Private
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="addCategoryPublic"
+                                value="public">
+                            <label class="form-check-label" for="addCategoryPublic">
+                                Public
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="createCategoryImg" class="bmd-label-floating">Picture</label>
+                            <img class="mb-2 w-100" id="selectedCategoryImg" />
+                            <input type="file" class="form-control-file overflow-hidden" id="createCategoryImg">
+                            <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                        </div>
+                        <button type="submit" id="add-category" class="btn btn-raised btn-primary my-3">Create Category</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="../../../js/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="../../../js/config.js"></script>
+    <script src="../../account/cognito-auth.js"></script>
+    <script src="./add-category.js"></script>
+    <script src="../../shared/shared-cognito.js"></script>
+
+</body>
+
+</html>

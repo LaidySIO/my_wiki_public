@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Wiki - Register</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+
+</head>
+
+<body class="page-register">
+    <div class="container h-100">
+
+        <div class="my-5">
+            <a href="../../index.html">
+                <button type="button" class="btn btn-raised btn-lg btn-link">
+                    <i class="fas fa-arrow-left">
+                    </i>
+                </button>
+            </a>
+            <h1 class="text-center md-6"> My Wiki </h1>
+        </div>
+        <div class="">
+            <div class="card col-md-4 m-auto">
+                <div class="card-body">
+                    <h5 class="card-title">Create account</h5>
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="emailInputRegister" class="bmd-label-floating">Email address</label>
+                            <input type="email" class="form-control" id="emailInputRegister" name="emailInputRegister" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usernameInputRegister" class="bmd-label-floating" >Username</label>
+                            <input type="text" class="form-control" id="usernameInputRegister" name="usernameInputRegister" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordInputRegister" class="bmd-label-floating">Password</label>
+                            <input type="password" class="form-control" id="passwordInputRegister" name="passwordInputRegister" required>
+                            <span class="bmd-help">At least 8 characters—the more characters, the better</span>
+                            <span class="bmd-help">A mixture of both uppercase and lowercase letters</span>
+                            <span class="bmd-help">A mixture of letters and numbers</span>
+                            <span class="bmd-help">Inclusion of at least one special character, e.g., ! @ # ? ]</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2InputRegister" class="bmd-label-floating">Confirm Password</label>
+                            <input type="password" class="form-control" id="password2InputRegister" name="password2InputRegister" required>
+                        </div>
+                        <button type="submit" class="btn btn-raised btn-primary">Sign Up</button>
+                        <a href="signin.html">
+                            <button type="button" class="btn btn-raised btn-link">
+                                Already have an account? Sign in
+                            </button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="../../js/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="cognito-auth.js"></script>
+    <script src="account.js"></script>
+</body>
+
+</html>

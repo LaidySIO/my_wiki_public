@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Wiki - About</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <script src="../../js/vendor/jquery-3.1.0.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+            integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+            integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+            crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+
+</head>
+
+<body class="page-about">
+<div class="container-fluid h-100" id="aboutRootDiv">
+
+    <!--<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="../home/home.html">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../home/home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-5">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item disabled" href="#">Profile</a>
+                        <a class="dropdown-item disabled" href="#">Settings</a>
+                        <a class="dropdown-item disabled" href="#">Help</a>
+                        <a class="dropdown-item disabled" href="#">About</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" id="signOut">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+
+    <h1 class="text-center md-6 my-3"> About </h1>
+
+    <div class="d-flex flex-row">
+
+        <div class="nav flex-column nav-pills col-md-2 m-5" id="about-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active btn btn-light" id="about-pills-mywiki-tab" data-toggle="pill" href="#about-pills-mywiki" role="tab"
+               aria-controls="about-pills-mywik" aria-selected="true">What is "My Wiki"</a>
+            <a class="nav-link btn btn-light" id="about-pills-creator-tab" data-toggle="pill" href="#about-pills-creator" role="tab"
+               aria-controls="about-pills-creator" aria-selected="false">Who I Am ?</a>
+            <a class="nav-link btn btn-light" id="about-pills-contact-tab" data-toggle="pill" href="#about-pills-contact" role="tab"
+               aria-controls="about-pills-contact" aria-selected="false">Contacts</a>
+            <a class="nav-link btn btn-light" id="about-pills-credits-tab" data-toggle="pill" href="#about-pills-credits" role="tab"
+               aria-controls="about-pills-credits" aria-selected="false">Credits</a>
+        </div>
+        <div class="tab-content m-5 col-md-8" id="about-pills-tabContent">
+            <div class="tab-pane fade" id="about-pills-mywiki" role="tabpanel" aria-labelledby="about-pills-mywiki-tab">
+                <p class="text-wrap noselect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis augue at
+                    nisl suscipit rhoncus.
+                    Etiam tempor arcu sit amet laoreet consequat. Nunc sit amet efficitur lectus, et sagittis magna.
+                    Suspendisse ornare, augue at scelerisque dapibus, ex enim dapibus est, quis tempor nibh nunc sit
+                    amet purus.
+                    Vestibulum neque nibh, suscipit non massa vitae, efficitur sagittis leo.
+                    Donec et felis massa. Cras semper, enim nec egestas consectetur, odio nisl maximus dolor, sed
+                    egestas arcu tellus faucibus dui.
+                    Vestibulum quis sagittis neque, ac ultricies arcu. Suspendisse molestie lobortis libero, ac iaculis
+                    quam.
+                    Aliquam bibendum mi ullamcorper arcu bibendum, nec aliquam turpis auctor. Quisque sed blandit erat.
+
+                    Aenean pulvinar, ex eget porta luctus, sapien felis pharetra leo, eu tincidunt justo mauris vel
+                    erat.
+                    Pellentesque arcu quam, pharetra eu est ut, interdum pellentesque erat. Vestibulum vulputate ipsum
+                    ut nulla auctor, nec lobortis ipsum rhoncus.
+                    Cras semper lacus mattis magna scelerisque, quis commodo dolor euismod. Fusce risus sapien,
+                    tincidunt sodales volutpat eget, tincidunt in est.
+                    Aliquam nec semper nibh, sit amet porta est. Etiam dapibus, orci vel sollicitudin porttitor, ex dui
+                    gravida nunc, in aliquet ligula justo et lacus.
+                    Sed facilisis nulla congue, tempor tortor ac, tristique turpis. Pellentesque tristique volutpat
+                    magna vel tempor.</p>
+            </div>
+            <div class="tab-pane fade show active" id="about-pills-creator" role="tabpanel" aria-labelledby="about-pills-creator-tab">
+                <p class="text-wrap noselect" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis augue at
+                    nisl suscipit rhoncus.
+                    Etiam tempor arcu sit amet laoreet consequat. Nunc sit amet efficitur lectus, et sagittis magna.
+                    Suspendisse ornare, augue at scelerisque dapibus, ex enim dapibus est, quis tempor nibh nunc sit
+                    amet purus.
+                    Vestibulum neque nibh, suscipit non massa vitae, efficitur sagittis leo.
+                    Donec et felis massa. Cras semper, enim nec egestas consectetur, odio nisl maximus dolor, sed
+                    egestas arcu tellus faucibus dui.
+                    Vestibulum quis sagittis neque, ac ultricies arcu. Suspendisse molestie lobortis libero, ac iaculis
+                    quam.
+                    Aliquam bibendum mi ullamcorper arcu bibendum, nec aliquam turpis auctor. Quisque sed blandit erat.
+
+                    Aenean pulvinar, ex eget porta luctus, sapien felis pharetra leo, eu tincidunt justo mauris vel
+                    erat.
+                    Pellentesque arcu quam, pharetra eu est ut, interdum pellentesque erat. Vestibulum vulputate ipsum
+                    ut nulla auctor, nec lobortis ipsum rhoncus.
+                    Cras semper lacus mattis magna scelerisque, quis commodo dolor euismod. Fusce risus sapien,
+                    tincidunt sodales volutpat eget, tincidunt in est.
+                    Aliquam nec semper nibh, sit amet porta est. Etiam dapibus, orci vel sollicitudin porttitor, ex dui
+                    gravida nunc, in aliquet ligula justo et lacus.
+                    Sed facilisis nulla congue, tempor tortor ac, tristique turpis. Pellentesque tristique volutpat
+                    magna vel tempor.</p>
+            </div>
+            <div class="tab-pane fade" id="about-pills-contact" role="tabpanel" aria-labelledby="about-pills-contact-tab">
+                <p class="text-wrap noselect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis augue at
+                    nisl suscipit rhoncus.
+                    Etiam tempor arcu sit amet laoreet consequat. Nunc sit amet efficitur lectus, et sagittis magna.
+                    Suspendisse ornare, augue at scelerisque dapibus, ex enim dapibus est, quis tempor nibh nunc sit
+                    amet purus.
+                    Vestibulum neque nibh, suscipit non massa vitae, efficitur sagittis leo.
+                    Donec et felis massa. Cras semper, enim nec egestas consectetur, odio nisl maximus dolor, sed
+                    egestas arcu tellus faucibus dui.
+                    Vestibulum quis sagittis neque, ac ultricies arcu. Suspendisse molestie lobortis libero, ac iaculis
+                    quam.
+                    Aliquam bibendum mi ullamcorper arcu bibendum, nec aliquam turpis auctor. Quisque sed blandit erat.
+
+                    Aenean pulvinar, ex eget porta luctus, sapien felis pharetra leo, eu tincidunt justo mauris vel
+                    erat.
+                    Pellentesque arcu quam, pharetra eu est ut, interdum pellentesque erat. Vestibulum vulputate ipsum
+                    ut nulla auctor, nec lobortis ipsum rhoncus.
+                    Cras semper lacus mattis magna scelerisque, quis commodo dolor euismod. Fusce risus sapien,
+                    tincidunt sodales volutpat eget, tincidunt in est.
+                    Aliquam nec semper nibh, sit amet porta est. Etiam dapibus, orci vel sollicitudin porttitor, ex dui
+                    gravida nunc, in aliquet ligula justo et lacus.
+                    Sed facilisis nulla congue, tempor tortor ac, tristique turpis. Pellentesque tristique volutpat
+                    magna vel tempor.</p>
+            </div>
+            <div class="tab-pane fade" id="about-pills-credits" role="tabpanel" aria-labelledby="about-pills-credits-tab">
+                <ul>
+                    <li>
+                        <div>
+                            Icônes conçues par <a href="https://www.flaticon.com/fr/auteurs/freepik" title="Freepik">Freepik</a>
+                            from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Photo by <a href="/photographer/bartekhdd-83644">bartekhdd</a> from <a href="https://freeimages.com/">FreeImages</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../../js/vendor/aws-cognito-sdk.min.js"></script>
+<script src="../../js/vendor/amazon-cognito-identity.min.js"></script>
+<script src="../../js/config.js"></script>
+<script src="../account/cognito-auth.js"></script>
+<script src="./about.js"></script>
+<script src="../shared/shared-cognito.js"></script>
+<script src="../shared/shared-navbar.js"></script>
+
+
+</body>
+
+</html>
