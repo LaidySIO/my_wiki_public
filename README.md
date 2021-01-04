@@ -40,13 +40,13 @@ API calls invoke **Lambda** to **add, update or delete data to DynamoDB**
 | PUT            | Lambda           |    [lambda-folder]       |
 | DELETE         | Lambda           |    [lambda-folder]       |
 
-[lambda-folder]: https://github.com/LaidySIO/my_wiki/tree/master/lambdas
+[lambda-folder]: https://github.com/LaidySIO/my_wiki_public/tree/master/lambdas
 [#1]: https://medium.com/@likhita507/using-api-gateway-to-get-data-from-dynamo-db-using-without-using-aws-lambda-e51434a4f5a0
 [#2]: https://medium.com/brlink/rest-api-just-with-apigateway-and-dynamodb-8a9b0cd76b7a
 
 ---
 
-Lambdas are written in Node.js and have **environment variable** for exemple in file [LambdaMyWikiCategoriesPost](https://github.com/LaidySIO/my_wiki/blob/master/lambdas/LambdaMyWikiCategoriesPost.js) : 
+Lambdas are written in Node.js and have **environment variable** for exemple in file [LambdaMyWikiCategoriesPost](https://github.com/LaidySIO/my_wiki_public/blob/master/lambdas/LambdaMyWikiCategoriesPost.js) : 
 * BUCKET : your bucket name (ex: my-project)
 * ROOTPATH : target path (ex: users-img if the folder is **/my-project/users-img/**)
 * ZONE : your bucket zone (ex: us-est-1)
@@ -55,12 +55,12 @@ See [here](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.ht
 
 ---
 
-You will have to update file [config.js](https://github.com/LaidySIO/my_wiki/blob/master/js/config.js) fill in Cognito and API Gateway infos. 
+You will have to update file [config.js](https://github.com/LaidySIO/my_wiki_public/blob/master/js/config.js) fill in Cognito and API Gateway infos. 
 ==> see this [tutorial](https://aws.amazon.com/fr/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/) at *step 5*.
 
 ---
 
-Images are stored with S3 (you can find exemples of actions on S3 objets in folder [/lambdas](https://github.com/LaidySIO/my_wiki/tree/master/lambdas)
+Images are stored with S3 (you can find exemples of actions on S3 objets in folder [/lambdas](https://github.com/LaidySIO/my_wiki_public/tree/master/lambdas)
 
 ---
 
