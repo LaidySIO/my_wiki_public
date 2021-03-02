@@ -1,5 +1,6 @@
-.vs/*
-.vscode/*
+/.vs/*
+/.vscode/*
+/.idea/*
 /.idea/workspace.xml
 /.idea/website_content.iml
 /.idea/misc.xml
