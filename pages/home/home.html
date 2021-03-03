@@ -16,7 +16,7 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="../../js/vendor/jquery-3.1.0.js"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
         integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
@@ -70,7 +70,24 @@
                 </span>
             </div>
 
-            <div id="categories" class="col-md-10 m-auto"></div>
+            <div id="categories" class="col-md-10 m-auto">
+                <div 
+                    v-for="category in categories" 
+                    v-bind:id="'categoryCard_' + category.id" 
+                    class="card bg-light mb-3 mx-2" 
+                    style="max-width: 15rem;">
+                    <div class="edit-categ-circle" style="display: none;">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="card-header h-100" style="max-height: 15rem;"><img
+                            src="https://mywikibucket.s3-eu-west-1.amazonaws.com/mywiki-categ-img/default_categ_img.jpg"
+                            class="w-100  h-100"></div>
+                    <div class="card-body" style="max-height: 15rem; ">
+                        <h5 class="card-title">{{category.name}}<i class="fas fa-xs float-right" v-bind:class="[category.public ? 'fa-users' : 'fa-user']"></i></h5>
+                        <p class="card-text noselect">{{category.description}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -28,6 +28,44 @@ MyWikiShared.pagesRoot = "../";
         }
     });
 
+    var getCategories = new Vue({
+        el: '#categories',
+        data: function () {
+            return {
+                categories: [],
+            };
+        },
+        mounted: function () {
+            this.load();
+        },
+        methods: {
+            load: function () {
+                var that = this;
+                $.ajax({
+                    method: 'GET',
+                    url: _config.api.invokeUrl + '/categories',
+                    headers: {
+                        Authorization: MyWikiShared.authToken
+                    },
+                    success: function (data) {
+                        that.categories = jsonToCategories(data.Items); 
+                        console.log(that.categories);
+                    },
+                    error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                        if (jqXHR.responseText == undefined) {
+                            noNetwork();
+                        } else {
+                            console.error('Error requesting Categories: ', textStatus, ', Details: ', errorThrown);
+                            console.error('Response: ', jqXHR.responseText);
+                            alert('An error occured when getting all categories:\n' + jqXHR.responseText);
+                            noCategoriesDB();
+                        }
+                    }
+                });
+            }
+        },
+    });
+
     /**
      * Get all Categories from dynamoDB
      * @param {}
@@ -68,6 +106,7 @@ MyWikiShared.pagesRoot = "../";
         // TODO : sort categories
         // Convert array of json objects to array of javascript object
         categories = jsonToCategories(result.Items);
+        console.log(categories);
 
         // Check if no categories found
         if (categoriesCount > 0) {
@@ -83,7 +122,7 @@ MyWikiShared.pagesRoot = "../";
     $(function onDocReady() {
 
         // Load all categories
-        getCategories();
+        // getCategories();
 
          // If user search categories
          $('#searchCategories').keyup(function () {
