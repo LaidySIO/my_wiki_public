@@ -18,15 +18,31 @@ MyWikiShared.pagesRoot = "../";
     // DEBUG
     MyWiki.getCurrentUser();
 
-    // Set spinner visibility on ajax request status
-    $(document).on({
+    
+    /* $(document).on({
         ajaxStart: function () {
             $('#spinner').addClass('spinner');
         },
         ajaxStop: function () {
             $('#spinner').removeClass('spinner');
         }
-    });
+    }); */
+
+    // Set search engine visibility
+    var searchEngine = new Vue ({
+        el: '#searchCategoriesDiv',
+        data: {
+            isVisible : false
+        }
+    })
+
+    // Set loading spinner visibility
+    var loadingSpiner = new Vue({
+        el: '#spinner',
+        data: {
+            isLoading : true
+        }
+    })
 
     var getCategories = new Vue({
         el: '#categories',
@@ -48,6 +64,7 @@ MyWikiShared.pagesRoot = "../";
             .then((res) => {
                 console.log(res.data.Items)
                 this.categories = jsonToCategories(res.data.Items);
+                searchEngine.isVisible = true;
             })
             .catch((error) => {
                 if (error.response) {
@@ -67,6 +84,9 @@ MyWikiShared.pagesRoot = "../";
                   }
                   console.log(error.config);
             })
+            .then(function () {
+                loadingSpiner.isLoading = false;
+            });
         },
         methods: {
             /* load: function () {

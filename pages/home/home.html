@@ -17,7 +17,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../../js/vendor/jquery-3.1.0.js"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
         integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
@@ -43,7 +43,7 @@
             </a>
         </div>
 
-        <div id="searchCategoriesDiv" class="bmd-form-group bmd-collapse-inline pull-xs-right col-md-6 m-auto">
+        <div id="searchCategoriesDiv" v-show="isVisible"  class="bmd-form-group bmd-collapse-inline pull-xs-right col-md-6 m-auto">
             <button class="btn bmd-btn-icon" data-toggle="collapse" data-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
                 <i class="fas fa-search"></i>
             </button>  
@@ -60,7 +60,7 @@
             </a>
         </div>
 
-        <div id="spinner" class="row col-md-12"></div>
+        <div v-bind:class="{ spinner: isLoading }" id="spinner" class="row col-md-12"></div>
 
         <div id="listCategRootDiv" class="col-md-10 m-auto">
             <div id="noCategories" class="alert alert-info text-center" role="alert">
